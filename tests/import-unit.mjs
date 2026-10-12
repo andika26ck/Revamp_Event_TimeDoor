@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {parseCSV,validateImport} from '../lib/import.js';
+assert.equal(parseCSV('\ufeffNama,No HP,Usia\r\n"Demo, Person",0800000011,10\r\n')[1][0],'Demo, Person');
+assert.equal(parseCSV('Nama;No HP;Usia\nDemo;0800000011;10')[1][1],'0800000011');
+assert.throws(()=>parseCSV('Nama,No HP,Usia\n"unclosed,0800000011,10'));
+assert.throws(()=>validateImport([['Name','Phone','Age']]));
+assert.equal(validateImport([['Nama','No HP','Usia'],['Test',800000011,10]])[0].errors.length>0,true);
+assert.equal(validateImport([['Nama','No HP','Usia'],['Demo','0800000011',10],['Demo','+62800000011',10]])[1].errors.some(e=>e.includes('Duplicate')),true);
+assert.equal(validateImport([['Nama','No HP','Usia'],['Demo','0800000011',10]],[{name:'Demo',phone:'+62800000011'}])[0].errors.some(e=>e.includes('already exists')),true);
+assert.equal(validateImport([['Nama','No HP','Usia'],['Demo','0800000011',-1]])[0].errors.length>0,true);
+assert.equal(validateImport([['Nama','No HP','Usia'],[null,null,null],['Valid','0800000011',10]])[0].row,3);
+console.log('PASS: 9 import parser/validation checks.');
