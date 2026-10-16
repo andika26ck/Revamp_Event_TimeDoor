@@ -1,6 +1,6 @@
 # V3.1 demo walkthrough
 
-Run `node scripts/serve.mjs` from the extracted project, open localhost:3000. No install/build needed for the included demo build. Keep default Demo clock28Sep2026 10:00WIB. Reset using the topbar reset action for a fresh scenario.
+Run `node scripts/serve.mjs` from the extracted project, open localhost:3000. No install/build needed for the included demo build. Keep default Demo clock28Sep2026 10:00WIB. Reset is optional and discards V3 local changes; do not reset merely to install a patch.
 
 ## Reschedule / frames11–14
 1. Events → Digital Literacy Workshop — Upcoming → Schedule.
@@ -42,3 +42,9 @@ Create Trial still permits exactly one row and locks all addition fields. PTM si
 5. For a pre-V3.1 manual row with missing value, click Set Demo Applied Amount; save a simulation without reset. Imports/forms do not get this shortcut.
 
 See `V3_1_CHANGES.md` for same-origin storage retention and detailed steps.
+
+## Updated in-app Demo Guide and reschedule banner
+- Events now shows **Coba Reschedule**, not the legacy **Try the key fix** Drop/Add prompt. **Buka Schedule** only navigates to an existing Trial schedule; it does not change or cancel a schedule. If no Trial exists, it opens the guide instead.
+- Demo Guide opens **Panduan Demo** with seven current topics: event creation; demo students and assignment; reviewed reschedule/cutoff/history; cross-type participant moves and fee outcomes; attendance/transaction details; Workshop import/forms; and the distinction between Reschedule and Drop + Add.
+- The reading area scrolls; the title and close action stay available on desktop/mobile. Opening or closing the guide never resets or edits stored data.
+- Demo Guide remains an optional tester aid, not a required event operation or production workflow step.

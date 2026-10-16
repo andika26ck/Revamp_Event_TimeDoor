@@ -26,3 +26,15 @@ body{font-family:'Poppins',Arial,sans-serif;font-size:13px;background:var(--bg)}
 /* Final V3 control refinements */
 input[type="radio"]{width:18px;height:18px;min-height:0;padding:0;accent-color:#168d1b;flex-shrink:0}
 button.text.danger{color:#b6354a}
+
+/* Only the demo guide uses a fixed header/footer with a scrollable reading area. */
+.modal.guide-modal{display:flex;flex-direction:column}
+.guide-modal>header,.guide-modal>.modalfooter{flex-shrink:0}
+.guide-modal>.modalbody{overflow-y:auto;min-height:0}
+.guide-modal>.modalfooter{position:static}
+.guide-modal .walkthrough{margin-top:24px}
+@media(max-width:760px){
+  .guidebar{gap:12px}
+  .guidebar>div{flex:1;min-width:0}
+  .guidebar>button{flex-basis:100%;margin:0;justify-content:flex-start;padding-left:29px}
+}
