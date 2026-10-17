@@ -1,3 +1,5 @@
+> V3.2 confirmed: Internal Meeting Participants is teacher-only, managed via Schedule. Workshop form submissions are Pending drafts; admin bulk confirmation adds students with quota/duplicate validation and retained Confirmed history, without payment or automatic assignment. See V3_2_MENTOR_REVISIONS.md.
+
 > V3.1 confirmed: Trial/Workshop/Bootcamp cross-type transfer, book/language differences reviewed, same branch/currency; PTM/Internal Meeting excluded. Demo-only applied amounts and legacy manual repair are documented in V3_1_CHANGES.md.
 
 > V3: cutoff2jam semua tipe dan assigned-only reschedule telah dikonfirmasi user. Transfer/reschedule lokal aktif; keputusan produksi tambahan tercatat di panduan14frame.

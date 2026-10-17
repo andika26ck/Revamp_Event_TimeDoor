@@ -1,3 +1,5 @@
+> **V3.2 — revisi mentor:** Participants Internal Meeting sekarang teacher-only. Form Workshop masuk Pending, lalu dipilih dan dikonfirmasi admin ke Student List. Riwayat Confirmed disimpan; tidak otomatis Paid atau assigned. **Panduan terbaru: `docs/V3_2_MENTOR_REVISIONS.md`**. Dokumen versi sebelumnya di bawah bersifat historis untuk bagian yang berubah. Tidak perlu Reset Data.
+
 > **V3.1:** demo students receive clearly labeled simulated applied amounts; legacy manual rows can be repaired without reset. Transfers support Trial ↔ Workshop ↔ Bootcamp across books/languages, with PTM/Internal Meeting excluded. See `docs/V3_1_CHANGES.md`.
 
 # Timedoor — Event Rules Demo
@@ -51,7 +53,7 @@ Seluruh14frame supplied direpresentasikan sebagai cabang/state interaktif. Bukan
 - Schedule: Add, reviewed Reschedule, View History, Assign existing students, Cancel/Drop upcoming, Add replacement. Member dan Session reference tetap sama. Dropped history tidak dihapus.
 - Attendance: dua jalur menuju detail occurrence yang sama, bahkan sebelum Finish. Manual Demo lifecycle: Upcoming/Ongoing/Finished.
 - Ongoing: Change Presence, note, late minutes dan minimal journal; Finished tetap viewable/read-only di demo.
-- Workshop: import XLSX/CSV → preview/validasi → participants; Generate Form → Preview → submit Nama/No HP/Usia → participant + Form Submissions. Tidak membuat paid order atau confirmed payment.
+- Workshop: import XLSX/CSV → preview/validasi → participants; Generate Form → Preview → submit Nama/No HP/Usia → Pending Form Submissions → select → review → confirm to Student List. Tidak membuat paid order atau confirmed payment.
 - Student Order Check: Internal Meeting diberi Blocked; tidak ada checkout/purchase nyata.
 - Reset Demo Data: kembali ke10seed event (5original +5movement scenarios).
 
@@ -80,7 +82,7 @@ Data tersimpan dengan key `timedoor-event-rules-demo-v3`. Refresh tidak menghapu
 
 ## Batas yang disengaja
 - Spreadsheet import **sudah aktif dengan format sementara**: Nama, No HP, Usia. Format dipilih atas arahan user; bukan format final brief. Lihat docs/IMPORT_FORMAT_PROVISIONAL.md.
-- Staff attendee Internal Meeting belum ditentukan; tidak mengganti dengan order Student.
+- Participants Internal Meeting menampilkan Teacher List dari Schedule, tanpa student. Model staff di luar teacher belum ditambahkan.
 - Quota dan room/teacher/student conflicts **divalidasi pada data lokal**. Real availability, concurrency locks, parent entitlement PTM, pricing Internal Meeting, checkout dan production authorization masih di luar scope.
 - Aturan single-active untuk PTM pada management, minimal journal dan Ongoing-only editing adalah **proposal demo**, bukan policy final produksi.
 - Dropdown Room memakai daftar statis sederhana, tidak memakai layanan pencarian.

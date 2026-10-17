@@ -15,5 +15,5 @@ Identity sementara: normalized Nama + No HP. Normalisasi Indonesia menyamakan le
 Duplikat dalam file atau event ditandai. Bila ada satu row invalid, seluruh import disabled; tidak ada partial import. Perbaiki file dan upload ulang.
 Import menambahkan participant pada event Workshop yang dituju saja, dengan origin Spreadsheet. Session purchase kosong / Not linked. Tidak membuat order, invoice, quota consumption atau pembayaran. Assign Students dapat memakai registrasi tersebut tanpa membuat purchase Session.
 
-## Form
-Form menambahkan participant dengan origin Registration form dan submission log. Perilaku ini adalah proposal demo; keputusan paid-event registration/checkout dan seat confirmation belum final. Duplikat participant sama ditolak. Semua data di browser yang sama, tidak tersinkron antar pengguna.
+## Form — updated V3.2
+Form hanya menambahkan submission Pending, bukan participant langsung. Admin memilih satu/beberapa calon di Form Submissions dan mengonfirmasi ke Student List setelah review, validasi duplikat dan kapasitas. Riwayat Confirmed disimpan. Tidak membuat paid order, invoice, purchase Session atau assignment. Lihat V3_2_MENTOR_REVISIONS.md. Semua data tetap lokal di browser/origin yang sama.

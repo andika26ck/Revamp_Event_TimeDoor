@@ -1,3 +1,5 @@
+> Historical V3.1 report. Latest V3.2 results: V3_2_QA_REPORT.md (126 checks).
+
 # V3.1 QA Report — Reschedule and Move Participants
 
 ## Scope and result
